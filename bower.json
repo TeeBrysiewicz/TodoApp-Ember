@@ -2,6 +2,8 @@
   "name": "to-do-front",
   "dependencies": {
     "ember": "~2.8.0",
-    "ember-cli-shims": "0.1.1"
+    "ember-cli-shims": "0.1.1",
+    "remodal": "1.1.0",
+    "font-awesome": "~4.5.0"
   }
 }

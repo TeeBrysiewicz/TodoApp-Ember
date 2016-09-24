@@ -6,7 +6,11 @@
 {{#each model as |todo|}}
   <div class="todo well">
     <h4>{{todo.title}}</h4>
-    <small>Created: {{todo.created_at}}</small>
-    <p>Finished: {{todo.is_completed}}</p>
+    <small>Created: {{format-date todo.created_at}}</small>
+    {{#if todo.is_completed}}
+    	<p>Good Job! {{fa-icon "thumbs-up"}}</p>
+    {{else}}
+    	<p>Not Finished {{fa-icon "thumbs-down"}}</p>
+    {{/if}}
   </div>
 {{/each}}

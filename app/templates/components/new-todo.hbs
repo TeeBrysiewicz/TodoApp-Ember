@@ -1,0 +1,10 @@
+<form>
+  <div class="form-group">
+    <label>Title</label>
+    {{input type="text" class="title form-control" name="title" value=title placeholder="Add Task..."}}
+  </div>
+  <button {{action 'addTodo'}} class="submit btn btn-primary" name="submit" >Submit</button>
+</form>
+
+
+<!-- {{action 'addTodo'}}  -->
