@@ -20,6 +20,11 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+
+    ENV.apiHost       = 'http://localhost:3000';
+    // ENV.apiNamespace  = 'api';
+    // ENV.apiFullPath   = ENV.apiHost + '/' + ENV.apiNamespace;
+
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
