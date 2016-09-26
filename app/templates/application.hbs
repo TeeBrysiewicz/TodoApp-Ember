@@ -13,8 +13,8 @@
       <ul class="nav navbar-nav">
         <li>{{#link-to 'todos'}}Todos{{/link-to}}</li>
         <li>
-          {{#ember-remodal openButton='New' buttonClasses='btn new-button'}}
-            {{new-todo}}
+          {{#ember-remodal openButton='New' buttonClasses='btn btn-success new-button'}}
+            {{new-todo addTodo='addTodo' title=todoTitle}}
           {{/ember-remodal}}
         </li>
       </ul>
