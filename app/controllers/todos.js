@@ -1,11 +1,11 @@
 import Ember from 'ember';
-import { Mixin } from 'ember-validations';
+// import { Mixin } from 'ember-validations';
 
-export default Ember.Controller.extend(Mixin, {
-	validations: {
-    'todo.title': {
-      presence: true,
-      length: { minimum: 5 }
-    }
-  }
+export default Ember.Controller.extend({
+	// validations: {
+ //    title: {
+ //      presence: true,
+ //      length: { minimum: 5 }
+ //    }
+ //  }
 });
