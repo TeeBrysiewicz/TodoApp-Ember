@@ -1,8 +1,6 @@
 import Ember from 'ember';
-import Mixin from 'ember-validations/index';
 
-
-export default Ember.Route.extend(Mixin, {
+export default Ember.Route.extend({
 	remodal : Ember.inject.service(),
 
 	setupController(controller, model) {
@@ -26,10 +24,5 @@ export default Ember.Route.extend(Mixin, {
 			this.get('remodal').close();
 		}
 	},
-	validations: {
-    'todo.title': {
-      presence: true,
-      length: { minimum: 5 }
-    }
-  }
+
 });
