@@ -8,7 +8,7 @@ export default Ember.Route.extend({
 		controller.set('todoTitle', '');
 	},
 	actions: {
-		addTodo: function(title){
+		addTodo: function(title) {
 			// Create New Task
 			let newTodo = this.store.createRecord('todo', {
 				title: title
@@ -22,7 +22,15 @@ export default Ember.Route.extend({
 				todoTitle: ''
 			});
 			this.get('remodal').close();
-		}
-	},
+		},
+		updateTodo: function(id) {
 
+			let todo = this.store.findRecord('todo', id).then(function(todo) {
+				let completed = todo.get('is_completed');
+				todo.set('is_completed', !completed);
+				console.log(todo);
+				todo.save();
+			});
+		}
+	}
 });

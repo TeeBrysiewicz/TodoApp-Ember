@@ -17,7 +17,7 @@
     </div>
 
     <div class="checkbox col-md-1 well">
-			<span class="complete" style="color:{{getCompletedColor todo.is_completed}}">{{fa-icon "check"}}</span>
+			<a href="#" {{action 'updateTodo' todo.id}}><span class="complete" style="color:{{getCompletedColor todo.is_completed}}">{{fa-icon "check"}}</span></a>
     </div>
 
   </div>
