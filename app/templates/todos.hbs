@@ -4,13 +4,21 @@
 <hr>
 
 {{#each model as |todo|}}
-  <div class="todo well">
-    <h4>{{todo.title}}</h4>
-    <small>Created: {{format-date todo.created_at}}</small>
-    {{#if todo.is_completed}}
-    	<p>Good Job! {{fa-icon "thumbs-up"}}</p>
-    {{else}}
-    	<p>Not Finished {{fa-icon "thumbs-down"}}</p>
-    {{/if}}
+  <div class="todo well row">
+
+  	<div class="col-md-11">
+	    <h4>{{todo.title}}</h4>
+	    <small>Created: {{format-date todo.created_at}}</small>
+	    {{#if todo.is_completed}}
+	    	<p>Good Job! {{fa-icon "thumbs-up"}}</p>
+	    {{else}}
+	    	<p>Not Finished {{fa-icon "thumbs-down"}}</p>
+	    {{/if}}
+    </div>
+
+    <div class="checkbox col-md-1 well">
+			<span class="complete" style="color:{{getCompletedColor todo.is_completed}}">{{fa-icon "check"}}</span>
+    </div>
+
   </div>
 {{/each}}
